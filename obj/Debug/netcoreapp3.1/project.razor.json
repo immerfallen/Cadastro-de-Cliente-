@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Cliente\\Filtrar.cshtml",
+      "TargetPath": "Views\\Cliente\\Filtrar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

@@ -62,6 +62,12 @@ namespace testeTempus.Controllers
             return View();
         }
 
+        public IActionResult Filtrar (string filtro){
+
+            ViewBag.ListaClientesFiltro = new ClienteModel().Filtrar(filtro);
+            return View();
+        }
+
         
     }
 }
