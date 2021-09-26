@@ -22,6 +22,8 @@ namespace testeTempus.Models
         public decimal RendaFamiliar { get; set; }
 
 
+
+
         public List<ClienteModel> ListarTodosClientes()
         {
             List<ClienteModel> lista = new List<ClienteModel>();
@@ -34,12 +36,12 @@ namespace testeTempus.Models
             {
                 item = new ClienteModel()
                 {
-                    Id = dt.Rows[i]["Id"].ToString(),
-                    Nome = dt.Rows[i]["Nome"].ToString(),
-                    CPF = dt.Rows[i]["CPF"].ToString(),
-                    DataNascimento = (DateTime)dt.Rows[i]["DataNascimento"],
-                    DataCadastro = (DateTime)dt.Rows[i]["DataCadastro"],
-                    RendaFamiliar = (Decimal)dt.Rows[i]["RendaFamiliar"]
+                    Id = dt.Rows[i]["id"].ToString(),
+                    Nome = dt.Rows[i]["nome"].ToString(),
+                    CPF = dt.Rows[i]["cpf"].ToString(),
+                    DataNascimento = (DateTime)dt.Rows[i]["data_nascimento"],
+                    DataCadastro = (DateTime)dt.Rows[i]["data_cadastro"],
+                    RendaFamiliar = (Decimal)dt.Rows[i]["renda_familiar"]
                 };
                 lista.Add(item);
 
@@ -66,6 +68,27 @@ namespace testeTempus.Models
                 sql = $"UPDATE cliente SET nome = '{Nome}', cpf = '{CPF}', data_nascimento = '{DataNascimento}', renda_familiar='{RendaFamiliar}' WHERE id = '{Id}' ";                
             }
             objDAL.ExecutarComandoSQL(sql);
+        }
+
+        public ClienteModel RetornarCliente(int? id)
+        {
+            
+            ClienteModel item;
+            DAL objDAL = new DAL();
+            string sql = $"SELECT id, nome, cpf, data_nascimento, data_cadastro, renda_familiar FROM cliente WHERE id='{id}'";
+            DataTable dt = objDAL.RetDataTable(sql);
+            
+                item = new ClienteModel()
+                {
+                    Id = dt.Rows[0]["id"].ToString(),
+                    Nome = dt.Rows[0]["nome"].ToString(),
+                    CPF = dt.Rows[0]["cpf"].ToString(),
+                    DataNascimento = (DateTime)dt.Rows[0]["data_nascimento"],
+                    DataCadastro = (DateTime)dt.Rows[0]["data_cadastro"],
+                    RendaFamiliar = (Decimal)dt.Rows[0]["renda_familiar"]
+                };              
+                        
+            return item;
         }
         
 

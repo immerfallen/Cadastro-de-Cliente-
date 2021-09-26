@@ -11,8 +11,28 @@ namespace testeTempus.Controllers
 {
     public class ClienteController : Controller
     {
+
+        public IActionResult Listar()
+        {
+
+            ViewBag.ListaClientes = new ClienteModel().ListarTodosClientes();
+
+            return View();
+        }
         public IActionResult Cadastro()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Cadastro(int? id)
+        {
+            if (id!= null)
+            {
+                //Carregar o registro do cliente em uma ViewBag
+                ViewBag.Cliente = new ClienteModel().RetornarCliente(id);
+            }  
+
             return View();
         }
 

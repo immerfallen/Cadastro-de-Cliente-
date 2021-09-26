@@ -14,7 +14,7 @@ namespace testeTempus.Uteis
         private static string Database = "administracao";
         private static string User = "root";
         private static string Password = "";
-        private static string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};Sslmode=none;Charset=utf8;";
+        private static string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};Sslmode=none;Charset=utf8; Convert Zero Datetime=True";
         private static MySqlConnection Connection;
 
         public DAL()
