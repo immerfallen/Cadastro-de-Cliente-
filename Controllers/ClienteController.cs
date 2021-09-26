@@ -43,10 +43,25 @@ namespace testeTempus.Controllers
             if (ModelState.IsValid)
             {
                 cliente.Gravar();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Listar", "Cliente");
             }
 
             return View();
         }
+        public IActionResult Excluir(int id)
+        {
+            ViewData["IdExcluir"] = id;
+
+
+            return View();
+        }
+
+        public IActionResult ExcluirCliente(int id)
+        {
+            new ClienteModel().Excluir(id);
+            return View();
+        }
+
+        
     }
 }

@@ -14417,6 +14417,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Cliente\\ExcluirCliente.cshtml",
+      "TargetPath": "Views\\Cliente\\ExcluirCliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Cliente\\Excluir.cshtml",
+      "TargetPath": "Views\\Cliente\\Excluir.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Cliente\\Listar.cshtml",
       "TargetPath": "Views\\Cliente\\Listar.cshtml",
       "FileKind": "mvc"

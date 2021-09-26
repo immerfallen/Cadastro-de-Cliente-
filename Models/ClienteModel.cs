@@ -17,9 +17,11 @@ namespace testeTempus.Models
         [Required(ErrorMessage="Informe a data de nascimento do cliente")]
         public DateTime DataNascimento { get; set; }
        
-        public DateTime DataCadastro { get; set; }
+        public DateTime DataCadastro  { get; set; }
         
         public decimal RendaFamiliar { get; set; }
+
+        
 
 
 
@@ -53,7 +55,7 @@ namespace testeTempus.Models
         {
             DAL objDAL = new DAL();
             string sql = string.Empty;
-            DataCadastro = DateTime.Now;
+            
             string dataCadastroFormatada = DataCadastro.ToString("yyyy-MM-dd HH:mm:ss");
             string dataNascimentoFormatada = DataNascimento.ToString("yyyy-MM-dd HH:mm:ss");
             
@@ -90,15 +92,15 @@ namespace testeTempus.Models
                         
             return item;
         }
-        
 
+        public void Excluir(int id)
+        {
+            DAL objDAL = new DAL();
+            string sql = string.Empty;
 
-        
-        
-        
-        
-        
-        
-        
+                sql = $"DELETE FROM cliente WHERE id = '{id}'";            
+            
+            objDAL.ExecutarComandoSQL(sql);
+        }   
     }
 }
