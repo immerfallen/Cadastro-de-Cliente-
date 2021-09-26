@@ -14402,6 +14402,11 @@
   "RootNamespace": "testeTempus",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Cliente\\Relatorio.cshtml",
+      "TargetPath": "Views\\Cliente\\Relatorio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14439,16 +14444,6 @@
     {
       "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\maro_\\Desktop\\testeTempus\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

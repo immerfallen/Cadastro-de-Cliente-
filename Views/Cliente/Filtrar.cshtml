@@ -26,7 +26,14 @@
                     <td class="text-center"><button type="button" class="btn btn-warning " onclick="Editar(@item.Id)">Editar</button></td>
                     <td class="text-center"><button type="button" class="btn btn-danger" onclick="Excluir(@item.Id)">Excluir</button></td>                   
                     <td>@item.Nome</td>                   
-                    <td>@item.RendaFamiliar</td>
+                   @{if(@item.RendaFamiliar<980)
+                    {
+                        <td> <p class="renda rendaBaixa"> R$ @item.RendaFamiliar.ToString("N0")</p></td>
+                    } else if(@item.RendaFamiliar<2500){
+                        <td> <p class="renda rendaMedia">R$ @item.RendaFamiliar.ToString("N0")</p></td>
+                    } else {
+                         <td> <p class="renda rendaAlta">R$ @item.RendaFamiliar.ToString("N0")</p></td>
+                    }} 
                 </tr>
             }
         }

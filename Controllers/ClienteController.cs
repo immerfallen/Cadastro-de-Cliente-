@@ -67,6 +67,10 @@ namespace testeTempus.Controllers
             ViewBag.ListaClientesFiltro = new ClienteModel().Filtrar(filtro);
             return View();
         }
+        public IActionResult Relatorio (){
+            
+            return View();
+        }
 
         
     }

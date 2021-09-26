@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using testeTempus.Uteis;
 using System.Data;
-
+using testeTempus.Uteis;
+using MySql.Data.MySqlClient;
 
 namespace testeTempus.Models
 {
@@ -133,5 +134,14 @@ namespace testeTempus.Models
                 return lista;
             }
         }
+
+       public void totalMaioresIdade(){          
+
+            DAL objDAL = new DAL();
+            string sql = "SELECT count(nome) FROM cliente WHERE ((Now()- data.nascimento) > 18) AND (renda_familiar > SUM(renda_familiar)/(count(nome)))";
+            objDAL.ExecutarComandoSQL(sql);
+            
+
+       }
     }
 }
