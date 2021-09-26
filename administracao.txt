@@ -1,0 +1,12 @@
+CREATE SCHEMA IF NOT EXISTS `administracao` DEFAULT CHARACTER SET utf8 ;
+USE `cliente` ;
+
+CREATE TABLE IF NOT EXISTS `administracao`.`cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(10) NOT NULL,
+  `data_nascimento` DATE NOT NULL,
+  `data_cadastro` DATE NOT NULL,
+  `renda_familiar` DECIMAL(9,2) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
